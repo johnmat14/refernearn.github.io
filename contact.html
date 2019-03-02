@@ -4,12 +4,45 @@ title: Contact
 permalink: /contact/
 ---
 
-<div id="about" style="text-align:center; background:none; background-color: rgb(250, 250, 250);">
-  <div class="container">
-    <div class="post">
-      <div class="text" style="width:100%; margin-top:-125px;">
-        <iframe src="https://docs.google.com/forms/d/1q5rLzXPCjNIyOWtKwcMU9q36PNRLKK4bd2MEqx3-fgg/viewform?embedded=true" width="760" height="1050" frameborder="0" marginheight="0" marginwidth="0">Loading...</iframe>
-      </div>
-    </div>
-  </div>
-</div>
+<div class="contact_form">
+							<h4 class="contact_form_heading">Send Us a Message <span class="pull-right"><img src="https://s3-ap-southeast-1.amazonaws.com/paymatrixuploads/static/new_home/send.png" class="sendmsg"></span></h4>
+							<div class=" form-group ">
+								<label class="form-label js-hide-label" for="identity">Enter your Name</label>
+								<input type="text" class="form-control form-size discount-code ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" id="identity" name="firstname" placeholder="Enter your name" value="" tabindex="2" ng-model="firstname" required="">
+								<span class="errors ng-hide" ng-show="contactForm.firstname.$touched &amp;&amp; contactForm.firstname.$invalid">
+								Please enter firstname
+								</span>
+							</div>
+							<div class=" form-group ">
+								<label class="form-label js-hide-label" for="email">Enter your Email</label>
+								<input type="email" class="form-control form-size discount-code ng-pristine ng-untouched ng-empty ng-valid-email ng-invalid ng-invalid-required ng-valid-pattern" ng-pattern="/^[^\s@]+@[^\s@]+\.[^\s@]{2,}$/" id="email" name="email" placeholder="Enter your Email" value="" tabindex="2" ng-model="email" required="">
+								<span class="errors ng-hide" ng-show="contactForm.email.$touched &amp;&amp; contactForm.email.$invalid">Please enter valid email address</span>
+							</div>
+							<div class=" form-group ">
+								<label class="form-label js-hide-label" for="mobile">Enter your Mobile number</label>
+
+								<input type="text" class="form-control form-size discount-code ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required ng-valid-pattern ng-valid-minlength ng-valid-maxlength" ng-minlength="10" ng-maxlength="10" id="mobile" name="mobile" ng-pattern="^[7-9][0-9]{9}$" placeholder="Enter your Mobile number" tabindex="2" ng-model="phone" ng-required="true" required="required">
+								<!-- <input type="text" class="form-control  form-size discount-code" id="mobile" name="mobile" placeholder="Enter your Mobile number" value="" tabindex="2" ng-pattern="regEx" ng-model="mobile" required> -->
+								<span class="errors ng-hide" ng-show="((registration.phone.$error.minlength || registration.phone.$error.maxlength) &amp;&amp; registration.phone.$dirty) ">phone number should be 10 digits</span>
+								<span class="errors ng-hide" ng-show="contactForm.mobile.$touched &amp;&amp; contactForm.mobile.$invalid">Please enter valid mobile number</span>
+							</div>
+							<div class=" form-group " style="height: auto;">
+								<label class="form-label js-hide-label" for="mobile">Message</label>
+								<textarea rows="3" class="form-control ng-pristine ng-untouched ng-empty ng-invalid ng-invalid-required" style="resize: none;" id="message" name="message" placeholder="Message" ng-model="message" required=""></textarea>
+								<span class="errors ng-hide" ng-show="contactForm.message.$touched &amp;&amp; contactForm.message.$invalid">Please enter Message</span>
+							</div>
+
+							<div>
+								<!-- <button type="button" ng-click="submitApplication()"  data-toggle="modal" data-target="#myModal2" class="kite_submit"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button> -->
+								<button type="button" ng-click="submitApplication()" id="kite_submit_btn" class="btn btn-info btn-lg kite_submit"><i class="fa fa-paper-plane-o" aria-hidden="true"></i></button>
+							</div>
+
+							<!-- <br> -->
+							<div class="row">
+			          <div class="textbox_padding" style="height:auto;">
+			            <div style="transform-origin: left top;-webkit-transform-origin: left top;" class="g-recaptcha" data-sitekey="6LedAV4UAAAAAH1kbBCYFRdwlSeBDY5fY0r7erDF"><div style="width: 304px; height: 78px;"><div><iframe src="https://www.google.com/recaptcha/api2/anchor?ar=1&amp;k=6LedAV4UAAAAAH1kbBCYFRdwlSeBDY5fY0r7erDF&amp;co=aHR0cHM6Ly9wYXltYXRyaXguaW46NDQz&amp;hl=en&amp;v=v1550471573786&amp;size=normal&amp;cb=8n665hrtgzrz" width="304" height="78" role="presentation" name="a-lydxisgze0hi" frameborder="0" scrolling="no" sandbox="allow-forms allow-popups allow-same-origin allow-scripts allow-top-navigation allow-modals allow-popups-to-escape-sandbox"></iframe></div><textarea id="g-recaptcha-response" name="g-recaptcha-response" class="g-recaptcha-response" style="width: 250px; height: 40px; border: 1px solid rgb(193, 193, 193); margin: 10px 25px; padding: 0px; resize: none; display: none;"></textarea></div></div><!--data-theme="dark"-->
+									<span id="cap_error" style="color:red;"></span>
+			          </div>
+			        </div>
+
+						</div>
